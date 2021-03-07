@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'MangaChaptersScreen.dart';
 import 'Scrapper.dart';
 
 class MangaListScreen extends StatefulWidget {
@@ -71,7 +72,7 @@ class _MangaListScreenState extends State<MangaListScreen> {
             return GestureDetector(
                 child: buildPoster(allMangas[index]),
               onTap: () {
-                Navigator.push(context,  MaterialPageRoute(builder: (context) => MangaListScreen(snapshot.data[index].mangaUrl)));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => MangaChaptersScreen(snapshot.data[index])));
               },
             );
           },
